@@ -3,3 +3,7 @@
   tasks:
   - name: i am pinging
     ping:
+  - name:  i am going install tree
+    apt:
+      name: tree
+      state: present
