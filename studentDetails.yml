@@ -1,0 +1,12 @@
+---
+- studentDetails: 
+   - name: aravind
+     phon: 787878787
+     address: KPHB
+     
+   - name: pratap
+     phon: 898879898
+     address: KPHB
+
+
+  
