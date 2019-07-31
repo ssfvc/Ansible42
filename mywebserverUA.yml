@@ -6,20 +6,20 @@
     apt:
      name: apache2
      state: present
-    when: anible_os_family =="Debian"
+    when: ansible_os_family =="Debian"
 
   - name: start webserver of ubuntu16
     service:
       name: apache2
       state: started
-    when: anible_os_family =="Debian"
+    when: ansible_os_family =="Debian"
   - name: install webserver on Amazon
     yum:
       name: httpd
       state: present
-    when: anible_os_family =="RedHat"
+    when: ansible_os_family =="RedHat"
   - name: start webserver of Amazon
     service:
       name: httpd
       state: started
-    when: anible_os_family =="RedHat"
+    when: ansible_os_family =="RedHat"
