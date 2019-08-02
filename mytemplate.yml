@@ -1,0 +1,21 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+
+  - name: install wensever on ubuntu16
+    apt:
+      name: apache2
+      state: present
+
+  - name: strart webserver
+    service:
+      name: apache2
+      state: strarted
+      
+  - name: copy index.j2 file into all nodes
+    template:
+      src:  index.j2
+      dest: /var/www/html/index.html
+
