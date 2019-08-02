@@ -1,0 +1,20 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: add package
+    apt_repository:
+      repo: ppa:openjdk-r/ppa
+      state: present
+    when: ansible_os_family =="Debian"
+
+  - name: update
+    apt:
+      update_cache: yes
+    when: ansible_os_family =="Debian"
+
+  - name: install java7 on ubuntu
+    apt: 
+      name: openjdk-7-jdk 
+      state: present
+    when: ansible_os_family =="Debian"
