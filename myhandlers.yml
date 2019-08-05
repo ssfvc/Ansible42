@@ -1,0 +1,29 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: install wensever on ubuntu16
+    apt:
+      name: apache2
+      state: present
+    notify: restartwebserver
+
+  - name: copy index.j2 file into all nodes
+    template:
+      src:  index.j2
+      dest: /var/www/html/index.
+    notify: restartwebserver
+    
+
+
+  handlers:
+  - name: restartwebserver
+    service:
+      name: apache2
+      state: restarted
+   
+
+
+
+
+
