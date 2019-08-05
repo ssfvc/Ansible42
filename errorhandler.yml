@@ -7,9 +7,9 @@
       name: git
 
 
-  - namee: install tree
+  - name: install tree
     apt:
-      name: tree
+      namee: tree
     ignore_errors: yes
   
 
