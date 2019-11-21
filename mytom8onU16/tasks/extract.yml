@@ -5,7 +5,4 @@
    state: directory
 
 - name: extract the tar file
-  unarchive:
-    src: /home/maha/apache-tomcat-8.5.47.tar.gz
-    dest: /opt/tomcat
-    extra_opts: [--strip-components=1]
+  command: tar xzvf /home/maha/apache-tomcat-8.5.47.tar.gz -C /opt/tomcat --strip-components=1
