@@ -1,5 +1,5 @@
 ---
 - name: copy confile 
   template:
-      src: confile.j2
+      src: templates/confile.j2
       dest: /etc/systemd/system/tomcat.service
