@@ -6,6 +6,6 @@
 
 - name: extract the tar file
   unarchive:
-    src: /home/ubuntu/apache-tomcat-8.5.47.tar.gz
+    src: /home/maha/apache-tomcat-8.5.47.tar.gz
     dest: /opt/tomcat
   
