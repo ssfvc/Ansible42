@@ -3,8 +3,9 @@
 
 - include_tasks: installjava.yml
 - include_tasks: createusers.yml
-#- include_tasks: download.yml
-- include_tasks: extract.yml
+- include_tasks: download.yml
+#- include_tasks: extract.yml
+- include_tasks: extract2.yml
 - include_tasks: Permissions.yml 
 - include_tasks: configfile.yml
 - include_tasks: tomstart.yml
