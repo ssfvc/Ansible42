@@ -1,8 +1,9 @@
 ---
 - name: creat directory
-    file:
-     path: /opt/tomcat
-     state: directory
+  file:
+   path: /opt/tomcat
+   state: directory
+
 - name: extract the tar file
   unarchive:
     src: /home/ubuntu/apache-tomcat-8.5.47.tar.gz
