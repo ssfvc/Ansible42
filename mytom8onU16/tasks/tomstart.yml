@@ -1,0 +1,10 @@
+---
+- name: reload
+  systemd:
+    name: tomcat
+    state: reloaded
+
+- name: tomcat started
+  systemd:
+    state: started
+    name: tomcat
